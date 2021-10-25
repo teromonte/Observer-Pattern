@@ -1,8 +1,15 @@
-public class StandardUser extends AbstractUserClass {
+import java.util.*;
+
+public class StandardUser implements User {
+    private String nome;
+    private List<String> newsList;
+
     public StandardUser(String nome) {
-        super(nome);
+        this.nome = nome;
+        newsList = new ArrayList<String>();
     }
+
     public void update(String news){
-        super.update(news);
+        newsList.add(news);
     }
 }

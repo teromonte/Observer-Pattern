@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class FeedClass {
-    List<AbstractUserClass> userCollection;
+    List<User> userCollection;
     List<String> news;
     public FeedClass(){
         userCollection= new ArrayList<>();

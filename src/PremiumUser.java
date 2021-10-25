@@ -1,9 +1,14 @@
-public class PremiumUser extends AbstractUserClass {
+import java.util.*;
+
+public class PremiumUser implements User {
+    private String nome;
+    private List<String> newsList;
     public PremiumUser(String nome) {
-        super(nome);
+        this.nome = nome;
+        newsList = new ArrayList<String>();
     }
 
     public void update(String news){
-        super.update(news);
+        newsList.add(news);
     }
 }
