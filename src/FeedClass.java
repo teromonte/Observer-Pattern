@@ -6,6 +6,20 @@ public class FeedClass {
     public FeedClass(){
         userCollection= new ArrayList<>();
         news = new LinkedList<>();
+
+    }
+
+    public void addNews(String Newnews, boolean premium) {
+        news.add(Newnews);
+        for (AbstractUserClass u : userCollection) {
+            if(u instanceof PremiumUser) {
+                u.update(Newnews);
+            } else {
+                if(!premium) {
+                    u.update(Newnews);
+                }
+            }
+        }
     }
     public void addUser(String nome,boolean premium){
         if(premium)
