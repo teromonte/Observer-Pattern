@@ -27,4 +27,14 @@ public class FeedClass {
         else
             userCollection.add(new StandardUser(nome));
     }
+
+    public void deleteUser(String nome){
+        for(AbstractUserClass u: userCollection){
+            if(u.getNome().equals(nome)){
+                userCollection.remove(u);
+                break;
+            }
+        }
+    }
+
 }

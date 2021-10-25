@@ -12,6 +12,10 @@ public abstract class AbstractUserClass {
     public void update(String news){
         this.news.add(news);
     }
+
+    public String getNome(){
+        return this.nome;
+    }
 }
 
 
