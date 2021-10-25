@@ -16,6 +16,18 @@ public class FeedClass {
             userCollection.add(new StandardUser(nome));
     }
 
+    public void addNews(String text, boolean premium){
+        news.add(text);
+
+        for(User u: userCollection){
+            if(u instanceof StandardUser) {
+                if (!premium)
+                    u.update(text);
+            }else
+                u.update(text);
+        }
+    }
+
     public void deleteUser(String nome) {
         for (User u : userCollection) {
             if (u.getNome().equals(nome)) {

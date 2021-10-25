@@ -6,10 +6,15 @@ public class StandardUser implements User {
 
     public StandardUser(String nome) {
         this.nome = nome;
-        newsList = new ArrayList<String>();
+        newsList = new ArrayList<>();
     }
 
     public void update(String news){
         newsList.add(news);
+    }
+
+    @Override
+    public String getNome() {
+        return nome;
     }
 }
