@@ -16,4 +16,9 @@ public class PremiumUser implements User {
     public String getNome() {
         return nome;
     }
+
+    @Override
+    public Iterator<String> newsIterator() {
+        return newsList.iterator();
+    }
 }
