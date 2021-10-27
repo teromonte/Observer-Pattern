@@ -19,11 +19,11 @@ public class FeedClass {
     public void addNews(String text, boolean premium){
         news.add(text);
 
-        for(User u: userCollection){
-            if(u instanceof StandardUser) {
+        for (User u : userCollection) {
+            if (u instanceof StandardUser) {
                 if (!premium)
                     u.update(text);
-            }else
+            } else
                 u.update(text);
         }
     }
