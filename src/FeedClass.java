@@ -36,4 +36,8 @@ public class FeedClass {
             }
         }
     }
+    
+    public Iterator<User> getUsers() {
+    	return userCollection.iterator();
+    }
 }
